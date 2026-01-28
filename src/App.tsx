@@ -1,8 +1,37 @@
 import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Strategien from './pages/Strategien';
 
 function App() {
   return (
     <div className="min-h-screen bg-black text-white">
+      {/* Nav */}
+      <nav className="py-6 px-8 bg-gray-950 border-b border-gray-800">
+        <div className="max-w-6xl mx-auto flex justify-between items-center">
+          <Link to="/" className="text-3xl font-black">COLOSSUS.</Link>
+          <Link to="/strategien" className="px-6 py-3 border-2 border-neon-purple hover:bg-purple-950/20 text-lg">
+            SIGNAL & STRATEGIE
+          </Link>
+        </div>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/strategien" element={<Strategien />} />
+      </Routes>
+
+      {/* Footer wie vorher */}
+      <footer className="py-12 text-center text-gray-600 border-t border-gray-800">
+        <p>© {new Date().getFullYear()} Colossus Trading Club – Powered by @esslinger-co</p>
+        <p className="mt-2">Free forever. Join the Colossus.</p>
+      </footer>
+    </div>
+  );
+}
+
+function Home() {
+  return (
+    <div>
       {/* Hero */}
       <header className="relative h-screen flex flex-col items-center justify-center text-center px-6">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-950/20 to-black"></div>
@@ -23,7 +52,7 @@ function App() {
 
           <div className="flex flex-col sm:flex-row gap-8 justify-center">
             <a
-              href="https://discord.gg/dein-discord-invite" // ← ECHTEN LINK EINFÜGEN!
+              href="https://discord.gg/dein-discord-invite"
               target="_blank"
               rel="noopener noreferrer"
               className="px-12 py-6 bg-neon-purple hover:bg-purple-600 font-black text-2xl rounded-xl shadow-2xl shadow-neon-purple/50 transition transform hover:scale-105"
@@ -31,7 +60,7 @@ function App() {
               DISCORD BEITRETEN
             </a>
             <a
-              href="https://t.me/dein-telegram-link" // ← ECHTEN LINK EINFÜGEN!
+              href="https://t.me/dein-telegram-link"
               target="_blank"
               rel="noopener noreferrer"
               className="px-12 py-6 border-2 border-neon-green hover:bg-neon-green/20 font-black text-2xl rounded-xl transition transform hover:scale-105"
@@ -75,12 +104,6 @@ function App() {
           Keine Finanzberatung. Trading birgt Risiken. Handle nur mit Geld, das du dir leisten kannst zu verlieren.
         </p>
       </section>
-
-      {/* Footer */}
-      <footer className="py-12 text-center text-gray-600 border-t border-gray-800">
-        <p>© {new Date().getFullYear()} Colossus Trading Club – Powered by @esslinger-co</p>
-        <p className="mt-2">Free forever. Join the Colossus.</p>
-      </footer>
     </div>
   );
 }
