@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/colossus-trading-club/static/css/main.5791d1c7.css",
+    "main.js": "/colossus-trading-club/static/js/main.69b2841e.js",
+    "static/js/453.5b56ac71.chunk.js": "/colossus-trading-club/static/js/453.5b56ac71.chunk.js",
+    "index.html": "/colossus-trading-club/index.html",
+    "main.5791d1c7.css.map": "/colossus-trading-club/static/css/main.5791d1c7.css.map",
+    "main.69b2841e.js.map": "/colossus-trading-club/static/js/main.69b2841e.js.map",
+    "453.5b56ac71.chunk.js.map": "/colossus-trading-club/static/js/453.5b56ac71.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5791d1c7.css",
+    "static/js/main.69b2841e.js"
+  ]
+}
